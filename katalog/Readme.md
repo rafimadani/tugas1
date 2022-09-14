@@ -2,7 +2,7 @@
 ## Rafi Madani / 2106750856
 ### https://pbp-project-2.herokuapp.com/catalog/
 ## Bagan
-Pertama-tama, http request masuk melalui urls.py. Dari sana, urls.py memanggil function dari views.py untuk melihat data. Agar bisa melihat data, views.py mengambil data dari models.py. Setelah mempunyai data nya, data akan di present sesuai format di filename.html
+Pertama-tama, http request masuk melalui urls.py. Dari sana, urls.py memanggil function dari views.py untuk melihat data. Agar bisa melihat data, views.py mengambil data dari models.py. Setelah mempunyai data nya, data akan di present ke user sesuai format di filename.html
 ## Mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 Jawabannya, kita menggunakan virtual environtmen agar kita bisa "mengisolasi" project kita. Andaikan kita mempunyai  project A dan A memakai Django versi 2.0, lalu kita membuat project baru bernama B dan kita membutuhkan Django versi 3.0 sehingga kita mengupgrade versi Django kita. Problemnya adalah, bila kita tidak memiliki virtual enviorenment, versi Django di projek A juga akan terupdate, akan menjadi masalah apabila projek A menjadi eror ketika versi Django nya di update. Dengan virtual environment, kita bisa mengisolasi projek kita sehingga peristiwa di contoh sebelumnya tidak terjadi. Walaupun begitu, kita tetap bisa membuat aplikasi web Django tanpa menggunakan virtual environment.
 ## Penjelasan Cara Mengimplementasikan Poin 1 sampai dengan 4
