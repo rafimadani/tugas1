@@ -54,7 +54,7 @@ def show_catalog(request):
     return render(request, "catalog.html", context)
 ```
 Di code atas, pertama-tama kita melakukan import _CatalogItem_ dari models. Setelah berhasil import, kita membuat function _show_catalog(request)_ yang berfungsi untuk menjadi data yang akan ditampilkan di html
-### filename.html
+### catalog.html
 ```
 {% for barang in list_barang %}
     <tr>
