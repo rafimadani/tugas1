@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+    <style>
+    table, th, td {
+      border:1px solid black;
+    }
+    </style>
+  <h1>Rafi's Movie Watchlist!</h1>
+  <h3>Don't judge my taste please :)</h3>
+  <h2>Tugas 3 PBP Semester Gasal 2022/2023</h2>
+
+  <h5>Name: </h5>
+  <p>{{nama}}</p>
+
+  <h5>Student ID: </h5>
+  <p>{{npm}}</p>
+
+  <table>
+    <tr>
+      <th>Already Watch?</th>
+      <th>Title</th>
+      <th>Personal Rating</th>
+      <th>Release Date</th>
+      <th>Personal Review</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for movie in list_movies %}
+    <tr>
+        <td>{{movie.watched}}</td>
+        <td>{{movie.title}}</td>
+        <td>{{movie.rating}}</td>
+        <td>{{movie.release_date}}</td>
+        <td>{{movie.review}}</td>
+    </tr>
+{% endfor %}
+  </table>
+
+ {% endblock content %}

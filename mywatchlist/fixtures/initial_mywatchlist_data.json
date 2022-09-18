@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 1,
+        "fields": {
+            "watched": "Yes",
+            "title": "Fight Club",
+            "rating": "4.7/5", 
+            "release_date": "11 November 1999",
+            "review": "A good representation about consumerism habit of modern society"
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 2,
+        "fields": {
+            "watched": "No",
+            "title": "Midsommar",
+            "rating": "?/5",
+            "release_date": "7 September 2019",
+            "review": "Untill Next Time"
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 3,
+        "fields": {
+            "watched": "Yes",
+            "title": "Dunkirk",
+            "rating": "4.9/5",
+            "release_date": "20 Juli 2017",
+            "review": "The frightening side of war is unrealistically real that i almost pissed myself when i watched this "
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 4,
+        "fields": {
+            "watched": "Yes",
+            "title": "The Godfather(1972)",
+            "rating": "4.5/5",
+            "release_date": "24 Maret 1972",
+            "review": "A real movie for a real man."
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 5,
+        "fields": {
+            "watched": "Yes",
+            "title": "Princess Mononoke",
+            "rating": "4.6/5",
+            "release_date": "July 12, 1997",
+            "review": "A visually breathtaking movie with a fairy tail vibe that you maybe never have seen before"
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 6,
+        "fields": {
+            "watched": "Yes",
+            "title": "Everything Everywhere All At Once",
+            "rating": "4.9/5",
+            "release_date": "22 Juni 2022",
+            "review": "Nihilism, Family, Death Meaning. Combine all that and i can conclude that this is the best movie of 2022"
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 7,
+        "fields": {
+            "watched": "Yes",
+            "title": "Howl's Moving Castle",
+            "rating": "4.1/5",
+            "release_date": "20 November 2004",
+            "review": "Just like Mononoke, it has a very breathtaking visual. But personally, i dont think that its story is as good as Mononoke. "
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 8,
+        "fields": {
+            "watched": "No",
+            "title": "Top Gun : Maverick",
+            "rating": "?/5",
+            "release_date": "27 Mei 2022",
+            "review": "Untill Next Time"
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 9,
+        "fields": {
+            "watched": "No",
+            "title": "Minions : The Rise Of Gru",
+            "rating": "?/5",
+            "release_date": "28 Juni 2022",
+            "review": "Untill Next Time"
+        }
+    },
+    {
+        "model": "mywatchlist.moviesItem",
+        "pk": 10,
+        "fields": {
+            "watched": "No",
+            "title": "Se7en",
+            "rating": "4.8/5",
+            "release_date": "22 September 1995",
+            "review": "Good didn't always win against the evil side. Nevertheless, Bradd pitt was a very powerful actor"
+        }
+    }
+]

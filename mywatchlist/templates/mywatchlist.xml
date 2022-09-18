@@ -1,0 +1,38 @@
+{% extends &#039;base.html&#039; %}
+
+ {% block content %}
+    &lt;style&gt;
+    table, th, td {
+      border:1px solid black;
+    }
+    &lt;/style&gt;
+  &lt;h1&gt;Rafi&#039;s Movie Watchlist!&lt;/h1&gt;
+  &lt;h3&gt;Don&#039;t judge my taste please :)&lt;/h3&gt;
+  &lt;h2&gt;Tugas 3 PBP Semester Gasal 2022/2023&lt;/h2&gt;
+
+  &lt;h5&gt;Name: &lt;/h5&gt;
+
+  &lt;h5&gt;Student ID: &lt;/h5&gt;
+
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Already Watch?&lt;/th&gt;
+      &lt;th&gt;Title&lt;/th&gt;
+      &lt;th&gt;Personal Rating&lt;/th&gt;
+      &lt;th&gt;Release Date&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Personal Review&lt;/th&gt;
+    &lt;/tr&gt;
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for movie in list_movies %}
+    &lt;tr&gt;
+        &lt;td&gt;{{movie.watched}}&lt;/td&gt;
+        &lt;td&gt;{{movie.title}}&lt;/td&gt;
+        &lt;td&gt;{{movie.rating}}&lt;/td&gt;
+        &lt;td&gt;{{movie.release_date}}&lt;/td&gt;
+        &lt;td&gt;{{movie.review}}&lt;/td&gt;
+    &lt;/tr&gt;
+{% endfor %}
+  &lt;/table&gt;
+
+ {% endblock content %}
