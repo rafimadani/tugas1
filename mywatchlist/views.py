@@ -16,10 +16,6 @@ def show_movies_html(request):
 
 def show_movies_xml(request):
     data = moviesItem.objects.all()
-    context = {
-    'nama': 'Rafi Madani',
-    'npm' : '2106750856'
-    }
     return HttpResponse(serializers.serialize("xml", data),content_type="application/xml")
 
 def show_movies_json(request):
