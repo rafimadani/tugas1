@@ -27,6 +27,7 @@
     {% comment %} Add the data below this line {% endcomment %}
     {% for movie in list_movies %}
     <tr>
+        <td>{{movie.watched}}</td>
         <td>{{movie.title}}</td>
         <td>{{movie.rating}}</td>
         <td>{{movie.release_date}}</td>
