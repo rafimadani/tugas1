@@ -10,7 +10,9 @@ def show_movies_html(request):
     context = {
     'list_movies': data_barang_movies,
     'nama': 'Rafi Madani',
-    'npm' : '2106750856'
+    'npm' : '2106750856',
+    "watched": moviesitem.objects.filter(watched="Yes").count(),
+    "not_watched": moviesitem.objects.filter(watched="No").count(),
     }
     return render(request, "mywatchlist.html",context)
 
