@@ -16,6 +16,13 @@ def show_movies_html(request):
     }
     return render(request, "mywatchlist.html",context)
 
+def show_movies_json_id(request,id):
+    data = moviesitem.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+def show_movies_xml_id(request,id):
+    data = moviesitem.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+
 def show_movies_xml(request):
     data = moviesitem.objects.all()
     return HttpResponse(serializers.serialize("xml", data),content_type="application/xml")
@@ -23,6 +30,9 @@ def show_movies_xml(request):
 def show_movies_json(request):
     data = moviesitem.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+
+
 
 
 
