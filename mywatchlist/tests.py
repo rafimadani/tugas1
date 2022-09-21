@@ -6,7 +6,7 @@ from django.test import Client
 
 class UnitTest(TestCase):
     def test_mywatchlist_html_if_exist(self):
-        response = Client().get('/mywatchlist/htmlview/')
+        response = Client().get('/mywatchlist/html/')
         self.assertEqual(response.status_code,200)
         
     def test_mywatchlist_json__if_exist(self):
