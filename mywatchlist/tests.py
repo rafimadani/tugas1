@@ -8,7 +8,7 @@ class UnitTest(TestCase):
     def test_mywatchlist_html_if_exist(self):
         response = Client().get('/mywatchlist/htmlview/')
         self.assertEqual(response.status_code,200)
-
+        
     def test_mywatchlist_json__if_exist(self):
         response = Client().get('/mywatchlist/json/')
         self.assertEqual(response.status_code,200)
