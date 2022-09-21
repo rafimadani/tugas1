@@ -1,6 +1,6 @@
 [
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 1,
         "fields": {
             "watched": "Yes",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 2,
         "fields": {
             "watched": "No",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 3,
         "fields": {
             "watched": "Yes",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 4,
         "fields": {
             "watched": "Yes",
@@ -44,7 +44,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 5,
         "fields": {
             "watched": "Yes",
@@ -55,7 +55,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 6,
         "fields": {
             "watched": "Yes",
@@ -66,7 +66,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 7,
         "fields": {
             "watched": "Yes",
@@ -77,7 +77,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 8,
         "fields": {
             "watched": "No",
@@ -88,7 +88,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 9,
         "fields": {
             "watched": "No",
@@ -99,7 +99,7 @@
         }
     },
     {
-        "model": "mywatchlist.moviesItem",
+        "model": "mywatchlist.moviesitem",
         "pk": 10,
         "fields": {
             "watched": "No",
