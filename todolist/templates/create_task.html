@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Task Creation Segment</h1>
+
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>Title: </td>
+            <td><input type="text" name="title" class="form-control"></td>
+        </tr>
+                
+        <tr>
+            <td>Description: </td>
+            <td><input type="text" name="description" class="form-control"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input class="btn login_btn" type="submit" value="Buat!"></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock content %}
