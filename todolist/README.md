@@ -193,4 +193,121 @@ urlpatterns = [
   Caranya simpel, register akun baru -> login -> create 3 task -> selesai
 
   Username & password - > (rafimadani & rafim555) (rafimadani2 & rafim555)
+ 
+# Readme.md for Tugas 5 PBP Semester Gasal 2022/2023 Rafi Madani
+## Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
+Perbedaan simpelnya dapat disimpulkan sebagai berikut:
+- Internal  — tambahkan tag <style> setelah bagian <head> di dokumen HTML
+- Eksternal — menimport settingan file .css ke file HTML 
+- Inline — menerapkan  settingan CSS di elemen spesifik langsung di html dan langsung di elemen tersebut.
+Berikut adalah contoh-contohnya:
+```
+#internal
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    input {
+  width: 100%;
+  pad: 20px;
+  margin-bottom: 20px;
+}
+.
+.
+```
+```
+#external
+<link rel="stylesheet" type="text/css" href="todolist.css" />
+```
+```
+#inline
+<div class = "login d-flex flex-column justify-content-center align-items-center" style="margin:auto;margin-top: 200px;margin-bottom: 200px;" >
+```
+Kelebihan dan kekurangan dari masing-masing jenis penulisan
+1. Internal
+   - (+)Lebih bersifat universal dibandingkan inline
+   - (+)Bisa menggunakan class dan ID selector di dalamnya
+   - (-) Semakin banyak modifikasi, berarti akan semakin panjang dan banyak html nya. Maka proses loadingnya akan semakin lama.
+2. External
+   - (+) File html akan sangat simpel dan pendek, sehingga akan lebih bersih dan terlihat mudah dimengerti
+   - (+) Kita bisa saja mengimport settingan di file css external ke banyak html berbeda
+   - (-) Halaman website akan ter-load sempurna seiring loading file css
+3. Inline
+   - (+) Bagus bila ingin membuat perubahan spesifik di elemen tertentu
+   - (+) Efektif untuk design website yang simpel dan pendek
+   - (-) Sangat tidak efisien dalam pembuatan website besar
+   - (-) Bila sangat banyak bentuk inline, html akan sulit dimengerti dikarenakan tidak rapih kelihatannya
+   
+## Jelaskan tag HTML5 yang kamu ketahui.
+- <h1> -> <h6>, untuk heading dengan urutan yang semakin lama mengecil
+- <a> untuk hyperlink
+- <p> untuk paragraf
+- <style> tempat menaruh style-style untuk internal style css
+- <label> biasanya untuk pasangan dari input, kayak semacam penjelasan dari apa yang mau di input(?)
+- <ul> untuk unordered list
+- dan masih banyak lagi 
+##  Jelaskan tipe-tipe CSS selector yang kamu ketahui.
+- CSS Element Selector
+```
+#select langsung elementnya
+h1 {
+background-color : black;
+}
+.
+.
+<h1>This style will be applied on every heading h1.</h1>  
+```
+- CSS Id Selector
+```
+#seperti element selector, bedanya lebih spesifik
+#test {
+background-color : black;
+}
+.
+.
+<h1 id="test"> This style will be applied on this heading .</h1>  
+<h1> This one won't be affected sir</h1>
+```
+- CSS Class Selector
+
+```
+# ini style yang memberi efek ke elemen yang mengandung class nya
+.test {  
+    text-align: center;  
+    color: blue;  
+} 
+.
+.
+<h1 class="test"> This heading will be colored blue and center-aligned</h1>
+<p  class="test"> This paragraph will be colred blue and center-aligned</p>
+
+- CSS Universal
+```
+#settingan yang ada di dalamnya akan berlaku ke semua elemen yang bisa berlaku
+* {  
+   color: red;  
+   font-size: 20px;  
+}   
+.
+.
+<h2>This is heading (and it will be red and 20px)</h2>  
+<p>This is paragraph (and it will be red and 20px)</p>  
+<p id="para1">This is paragraph and have para1 as an id (but it will be red and 20px)</p>  
+<p>Read and 20px too</p>  
+```
+- Dan masih banyak lagi,
+
+##  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Kustomisasi templat HTML yang telah dibuat pada Tugas 4 dengan menggunakan CSS atau CSS framework (seperti Bootstrap, Tailwind, Bulma) dengan beberapa ketentuan berikut.
+- Pertama-tama, saya menggunakan bootstrap agar bisa responsive dengan mudah.
+- Lalu, untuk tiap-tiap html, ada yang saya mengambil inspirasi, dan beberapa saya kerjakan sendiri
+- Untuk login.html, saya mengambil inspirasi dari  https://gosnippets.com/snippets/bootstrap-4-simple-login-form-with-social-login 
+- Untuk register.html, todolist.html, create-task.html. Saya mengerjakan sendiri. Implementasi hanya berdasarkan feeling dan selera pribadi, serta bantuan dari website bootstrap untuk desain nya.
+- Untuk todolist.html sendiri, saya mengambil referensi cards dari website boostrap, lalu saya menggunakan navbar agar tampilan nya bisa rapih sedikit
+- Untuk responsiveness website, jujur saya agak bingung apakah saya harus memakai media query atau tidak, dikarenakan saya sudah merasa website saya sudah responsive berkat bootstrap. Jadi saya tidak melakukan apa-apa untuk responsiveness selain menggunakan boostrap.
+
+
+   
+
+
 
