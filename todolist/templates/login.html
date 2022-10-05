@@ -5,41 +5,99 @@
 {% endblock meta %}
 
 {% block content %}
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.bordert {
+    border-top: 0.5px solid #aaa;
+    position: relative
+}
 
-<div class = "login">
+.bordert:after {
+    content: "or connect with";
+    position: absolute;
+    top: -13px;
+    left: 35%;
+    background-color: #fff;
+    padding: 0px 8px
+}
+a[target='_blank'] {
+    position: relative;
+    transition: all 0.1s ease-in-out
+}
+.btn.btn-primary {
+    margin-top: 20px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative
+}
+    div
+  {
+    border-radius: 25px;
+    box-shadow: 25px ;
+margin : auto;
+  width: 400px;
+  border: 2px ;
+  padding: 4px 8px;
+  background: white;
+  }
+  h1
+  {
+    font-family: sans-serif;
+    font-size: 145%;
+  margin-top: .5em;
+  margin-bottom: 1em; 
+  }
+  body{
+    background: linear-gradient(to right,  #de6262 , #ffb88c ) no-repeat;
+    margin: 0px;
+    padding: 0px;
+  }
+  p {
+  text-indent: 50px;
+  text-align: justify;
+}
+  @media only screen and (max-width: 600px) and (max-height:600px){
+    body{
+        width: 600px;
+        height: 600px;
+    }
+}
+</style>
 
-    <h1>Login</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
+<body>
+        <div class = "login d-flex flex-column justify-content-center align-items-center" style="margin:auto;margin-top: 200px;margin-bottom: 200px;" >
+            <h1>Welcome Back!</h1>
+            <form method="POST" action="" class="d-flex flex-column justify-content-center">
+                {% csrf_token %}
+                <div class="text-justify">
+                    <input type="text" name="username" placeholder="Username" class="form-control" required >
+                </div>
+                <div class="text-justify">
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                </div>
+                    <button type="submit" class="btn login_btn btn-primary" value="login">Login</button>
+                
+            </form>
         
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
-</div>
-
+            <p>  
+            Belum mempunyai akun?     <a href="{% url 'todolist:register' %}" ;>Buat Akun</a>
+            </p> 
+            <div class="mx-3 my-1 py-1 bordert">
+                <div class="text-center py-2 "> <a href="https://wwww.facebook.com" target="_blank" class="px-1"> <img src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""> </a> <a href="https://www.google.com" target="_blank" class="px-2"> <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png" alt=""> </a> <a href="https://www.github.com" target="_blank" class="px-2"> <img src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png" alt=""> </a> </div>
+            </div>
+        </div>
+        
+</body>
 {% endblock content %}

@@ -1,34 +1,87 @@
-{% extends 'base.html' %}
 
-{% block meta %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+  
 <title>Registrasi Akun</title>
-{% endblock meta %}
+<style>
+body{
+    background :linear-gradient(to right,  #000428 , #004e92 ) no-repeat;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1{
+    background-color: red;
+}
+div
+  {
+    border-radius: 25px;
+    box-shadow: 25px ;
+    margin : auto;
 
-{% block content %}  
+  border: 2px ;
+  padding: 4px 8px;
+  background: white;
+  }
+label {
+float: left;
+width: 10em;
+margin-right: 1em;
+}
+</style>
+</head>
 
-<div class = "login">
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     
-    <h1>Formulir Registrasi</h1>  
+<section class="vh-100" >
+<div class = "login" >
+    
+    <h1> Start Your Journey Here!</h1>  
 
-        <form method="POST" >  
-            {% csrf_token %}  
-            <table>  
-                {{ form.as_table }}  
-                <tr>  
-                    <td></td>
-                    <td><input type="submit" name="submit" value="Daftar"/></td>  
-                </tr>  
-            </table>  
-        </form>
+    <form method="POST" >  
+        {% csrf_token %}
+        <div class="text-justify">
+            <label for="exampleUsername" class="form-label">Username</label>
+            <input type="text" name="username" placeholder="Username" class="form-control" style="width: 450px" required>
+            <br>
+            <span class="helptext"><ul><li>150 characters or fewer</li><li> Letters, digits and @/./+/-/_ only</li></ul> </span>
+          </div>
+        <div class="text-justify">
+            <label for="id_password1" class="form-label">Password</label>
+            <input type="password" name="password1" placeholder="your dearest password :)" autocomplete="new-password" required id="id_password1" class="form-control" required style="width: 450px">
+            <br>
+            <span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>
+        </div>
+        <div class="text-justify">
+            <label for="id_password1" class="form-label">Password Again</label>
+            <input type="password" name="password2" placeholder="enter the same password as above"autocomplete="new-password" required id="id_password2" class="form-control" required style="width: 450px">
+            <br>
+            <span class="helptext">Enter the same password as before, for verification.</span>
+        </div>
 
-    {% if messages %}  
-        <ul>   
-            {% for message in messages %}  
-                <li>{{ message }}</li>  
-                {% endfor %}  
-        </ul>   
-    {% endif %}
+        <button type="submit" class="btn register_btn btn-primary" value="login" style="position: relative;left:350px;">Sign Up</button>
 
-</div>  
+    </form>
 
-{% endblock content %}
+    
+
+</div> 
+</section> 
+
+
+</body>
+
+</html>

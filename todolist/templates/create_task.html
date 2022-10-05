@@ -1,27 +1,71 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Task Creation Segment</h1>
+<style>
+    input {
+  width: 100%;
+  pad: 20px;
+  margin-bottom: 20px;
+}
+    label{
+        color: orange;
+        text-align: center;
+        font-style: 'Nunito',sans-serif;
+        font-size: 20px;
+        width: 100%;
+        margin-bottom : 20px;
+        
+    }
+    h1{
+        margin: auto;
+        width:50%
+    }
+    .container {
+    font-family: arial;
+    background-color: #020631 ;
+    font-size: 24px;
+    margin :auto;
+    margin-top:200px;
+    width: 350px;
+    height: 200px;
+    outline: dashed 1px black;
+    border: none;
+    outline: 0;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
 
+  }
+  body {
+  background: #020631;
+  font: 14px 'Nunito', sans-serif;
+}
+button{
+    text-align: right;
+    width: 100%;
+    margin-bottom: 20px;
+}
+a{
+    color:white;
+  }
 
-<form method="POST" action="">
-    {% csrf_token %}
-    <table>
-        <tr>
-            <td>Title: </td>
-            <td><input type="text" name="title" class="form-control"></td>
-        </tr>
+</style>
+<body>
+<div class="container">
+    <form method="POST" action="">
+        {% csrf_token %}
+                <label>What do you want to do today?</label>
+                <input type="text" name="title" class="form-control" placeholder="Masukkan Nama Tasknya Ganteng/Cantik :)">
+                <input type="text" name="description" class="form-control" placeholder="Deskripsiin dong kamu ngapain ajaa:)">
+                <button type="submit" class="btn btn-success">Lets Do It!</button>
+                <div class="text-end" style="background:none;border:0px;outline:none;">
+                    <button type="button" class="btn btn-primary btn-sm p-0" style="text-align:center;width: 50%;"><a href ="{% url 'todolist:show_todolist' %}">Home</a></button>
+                </div>
                 
-        <tr>
-            <td>Description: </td>
-            <td><input type="text" name="description" class="form-control"></td>
-        </tr>
 
-        <tr>
-            <td></td>
-            <td><input class="btn login_btn" type="submit" value="Buat!"></td>
-        </tr>
-    </table>
-</form>
 
+    </form>
+
+</div>
+</body>
 {% endblock content %}
