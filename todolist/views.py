@@ -22,16 +22,6 @@ from django.urls import reverse
 
 from django.contrib.auth.decorators import login_required
 
-def show_todolist_json(request):
-    username = request.COOKIES['username']
-    user = User.objects.get(username=username)
-    data_task = Task.objects.filter(user=user)
-    context = {
-        'data' : data_task,
-        'username' : username,
-        'user': user
-    }
-    return render(request, "todolist_json.html", context)
 
 def show_json(request):
     username = request.COOKIES['username']
@@ -106,7 +96,6 @@ def create_task(request):
     return render(request, 'create_task.html', context)
 
 def create_task_json(request):
-    form = TaskCreationForm()
     form = TaskCreationForm()
     if request.method == "POST" and request.is_ajax():
         form = TaskCreationForm(request.POST)
