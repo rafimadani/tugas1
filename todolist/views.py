@@ -108,7 +108,7 @@ def create_task_json(request):
             errors = form.errors.as_json()
             return JsonResponse({"errors": errors}, status=400)
 
-    return render(request, "todolist_json.html", {"form": form})
+    return render(request, "todolist.html", {"form": form})
 
 
 
